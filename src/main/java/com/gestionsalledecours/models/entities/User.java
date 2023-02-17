@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,7 +17,7 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String lastname;
 
     @Column(nullable = false)
     private String firstname;

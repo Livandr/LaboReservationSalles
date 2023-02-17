@@ -22,4 +22,9 @@ public class Room {
 
     @Column(nullable = false)
     private boolean teacherOnly;
+
+    @ManyToOne
+    @JoinColumn(name = "reservation_id")
+    private Reservation reservation;
+
 }

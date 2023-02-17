@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +19,10 @@ public class Reservation {
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime dateStart;
+    private LocalDateTime start;
 
     @Column(nullable = false)
-    private int duration;
+    private LocalDateTime end;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

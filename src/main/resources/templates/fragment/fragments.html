@@ -1,0 +1,56 @@
+<th:block th:fragment="base_css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</th:block>
+
+<th:block th:fragment="base_js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</th:block>
+
+<th:block th:fragment="header">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/static">Reservation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/room/all" role="button" aria-expanded="false">Rooms</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/room/all">List of available rooms</a></li>
+                            <li><a class="dropdown-item" href="#">Book</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Equipment</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="equipment/all">List of available items</a></li>
+                            <li><a class="dropdown-item" href="#">Book</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="auth/register-form">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+</th:block>
+
+<th:block th:fragment="footer">
+    <footer>
+        <p>Spring RoomReservation | 2023 | Liv Andr</p>
+    </footer>
+</th:block>

@@ -1,0 +1,22 @@
+h1{
+    color: crimson;
+
+}
+
+.form-error {
+    color: red;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.inline-form{
+    display: inline;
+}
+
+table{
+    border-color: black;
+    border-style: groove;
+}
