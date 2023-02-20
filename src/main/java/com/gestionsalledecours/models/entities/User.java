@@ -29,7 +29,7 @@ public class User {
     private String email;
 
     @Column
-    private String tel;
+    private String phone;
 
     @Column (nullable = false)
     private String login;
@@ -37,8 +37,8 @@ public class User {
     @Column (nullable = false)
     private String password;
 
-    @OneToMany(targetEntity = Reservation.class, mappedBy = "user")
-    private Set<Reservation> reservations = new LinkedHashSet<>();
+    @OneToMany(targetEntity = RoomReservation.class, mappedBy = "user")
+    private Set<RoomReservation> roomReservations = new LinkedHashSet<>();
 
 
 

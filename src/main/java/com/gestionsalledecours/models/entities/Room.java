@@ -25,6 +25,6 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "reservation_id")
-    private Reservation reservation;
+    private RoomReservation roomReservation;
 
 }

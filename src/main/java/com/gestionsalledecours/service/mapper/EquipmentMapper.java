@@ -21,9 +21,7 @@ public class EquipmentMapper {
             return null;
 
         Equipment equipment = new Equipment();
-
         equipment.setName(form.getName());
-
         return equipment;
     }
 }

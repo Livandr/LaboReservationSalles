@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "reservation")
 @Getter@Setter
-public class Reservation {
+public class RoomReservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,12 +24,14 @@ public class Reservation {
     @Column(nullable = false)
     private LocalDateTime end;
 
+    private String reason;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @OneToMany(targetEntity = Room.class, mappedBy = "reservation")
-    private List<Room> rooms = new ArrayList<>();
+    @OneToMany(targetEntity = Room.class, mappedBy = "roomReservation")
+    private Set<Room> rooms = new LinkedHashSet<>();
 
     @Column(nullable = false)
     private boolean status;

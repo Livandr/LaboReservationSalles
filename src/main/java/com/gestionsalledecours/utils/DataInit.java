@@ -29,6 +29,7 @@ public class DataInit implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         log.info("-- INITIALIZING DB DATA --");
 
+//        ROOM ------------------------------------
         Room room1 = new Room();
         room1.setRoomName("Mario");
         room1.setCapacity(30);
@@ -60,35 +61,77 @@ public class DataInit implements InitializingBean {
         room4 = roomRepository.save(room4);
         room5 = roomRepository.save(room5);
 
-        User user1 = new User();
-        user1.setLastname("patagueul");
-        user1.setFirstname("james");
-        user1.setRole(Role.TEACHER);
-        user1.setEmail("james.patagueul@yahoo.fr");
-        user1.setTel(" ");
-        user1.setLogin("patjam");
-        user1.setPassword("test");
+//        USER --------------------------------
 
-        User user2 = new User();
-        user2.setLastname("deloin");
-        user2.setFirstname("alain");
-        user2.setRole(Role.STUDENT);
-        user2.setEmail("aldeloin@gmail.com");
-        user2.setTel(" ");
-        user2.setLogin("delala");
-        user2.setPassword("test");
+        User admin1 = new User();
+        admin1.setLastname("Le Boss");
+        admin1.setFirstname("James");
+        admin1.setEmail("jlb@highschoolbelgium.be");
+        admin1.setRole(Role.ADMIN);
+        admin1.setPhone("0499999999");
+        admin1.setLogin("jlb@highschoolbelgium.be");
+        admin1.setPassword("pass");
 
 
-        user1 = userRepository.save(user1);
-        user2 = userRepository.save(user2);
+        User teacher1 = new User();
+        teacher1.setLastname("Lindien");
+        teacher1.setFirstname("Joe");
+        teacher1.setEmail("jli@highschoolbelgium.be");
+        teacher1.setRole(Role.TEACHER);
+        teacher1.setPhone("0499999990");
+        teacher1.setLogin("jli@highschoolbelgium.be");
+        teacher1.setPassword("pass");
+
+        User teacher2 = new User();
+        teacher2.setLastname("patagueul");
+        teacher2.setFirstname("james");
+        teacher2.setRole(Role.TEACHER);
+        teacher2.setEmail("james.patagueul@yahoo.fr");
+        teacher2.setPhone("0472553322");
+        teacher2.setLogin("patjam");
+        teacher2.setPassword("pass");
+
+
+        User student1 = new User();
+        student1.setLastname("Le Boss");
+        student1.setFirstname("James");
+        student1.setEmail("jlb@highschoolbelgium.be");
+        student1.setRole(Role.ADMIN);
+        student1.setPhone("0499999999");
+        student1.setLogin("jlb@highschoolbelgium.be");
+        student1.setPassword("pass");
+
+        User student2 = new User();
+        teacher2.setLastname("deloin");
+        teacher2.setFirstname("alain");
+        teacher2.setRole(Role.STUDENT);
+        teacher2.setEmail("aldeloin@gmail.com");
+        teacher2.setPhone("0498951231");
+        teacher2.setLogin("delala");
+        teacher2.setPassword("pass");
+
+        admin1 = userRepository.save(admin1);
+
+
+        teacher1 = userRepository.save(teacher1);
+        teacher2 = userRepository.save(teacher2);
+
+        student1 = userRepository.save(student1);
+        student2 = userRepository.save(student2);
+
+
+//        EQUIPEMENT
 
         Equipment equipment1 = new Equipment();
-        equipment1.setName("projecteur EPSON");
+        equipment1.setName("projector EPSON");
         Equipment equipment2 = new Equipment();
         equipment2.setName("Smart TV SONY 85'");
+        Equipment equipment3 = new Equipment();
+        equipment3.setName("laptop pc");
 
         equipment1 = equipmentRepository.save(equipment1);
         equipment2 = equipmentRepository.save(equipment2);
+        equipment3 = equipmentRepository.save(equipment3);
 
         log.info("-- DATA INIT FINISHED --");
 

@@ -35,4 +35,9 @@ public class EquipmentServiceImpl implements EquipmentService{
         Equipment entity = equipmentMapper.toEntity(form);
         equipmentRepository.save(entity);
     }
+
+    @Override
+    public void delete(Long id) {
+        equipmentRepository.deleteById(id);
+    }
 }

@@ -10,4 +10,6 @@ public interface EquipmentService {
     List<EquipmentDTO> getAll();
 
     void insert(EquipmentInsertForm form);
+
+    void delete(Long id);
 }
