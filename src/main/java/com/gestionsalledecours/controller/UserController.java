@@ -22,21 +22,6 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-//    @GetMapping("/register")
-//    public String registerForm(@ModelAttribute("form")RegisterForm form){
-//        return "/user/register-form";
-//    }
-//
-//    @GetMapping("/register")
-//    public String processRegistration(@ModelAttribute("form") @Valid RegisterForm form, BindingResult bindingResult){
-//        if(bindingResult.hasErrors()){
-//            form.setPassword(null);
-//            return "/user/register-form";
-//        }
-//        userConnection.register(form);
-//        return "redirect:/";
-//    }
-
     @PostMapping("/sign-in")
     public String processConnectionForm(
             @ModelAttribute("form") @Valid ConnectionForm form,
