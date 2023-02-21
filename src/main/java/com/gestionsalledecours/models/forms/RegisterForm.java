@@ -2,9 +2,9 @@ package com.gestionsalledecours.models.forms;
 
 import com.gestionsalledecours.models.entities.Role;
 import com.gestionsalledecours.validation.constraints.EmailNotTaken;
+import com.gestionsalledecours.validation.constraints.PasswordConfirmed;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -22,8 +22,6 @@ public class RegisterForm {
 
     @NotBlank(message = "enter a password")
     @Size(min = 6)
-    @Pattern( regexp = "^^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$",
-            message = "your password must contain atleast 1 uppercase, 1 lowercase, 1 special character and 1 digit")
     private String password;
 
     @NotBlank(message = "confirm your password")

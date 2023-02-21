@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "\"user\"")
@@ -38,7 +38,7 @@ public class User {
     private String password;
 
     @OneToMany(targetEntity = RoomReservation.class, mappedBy = "user")
-    private Set<RoomReservation> roomReservations = new LinkedHashSet<>();
+    private List<RoomReservation> roomReservations = new ArrayList<>();
 
 
 

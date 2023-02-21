@@ -66,18 +66,17 @@ public class DataInit implements InitializingBean {
         User admin1 = new User();
         admin1.setLastname("Le Boss");
         admin1.setFirstname("James");
-        admin1.setEmail("jlb@highschoolbelgium.be");
         admin1.setRole(Role.ADMIN);
+        admin1.setEmail("jlb@highschoolbelgium.be");
         admin1.setPhone("0499999999");
         admin1.setLogin("jlb@highschoolbelgium.be");
         admin1.setPassword("pass");
 
-
         User teacher1 = new User();
         teacher1.setLastname("Lindien");
         teacher1.setFirstname("Joe");
-        teacher1.setEmail("jli@highschoolbelgium.be");
         teacher1.setRole(Role.TEACHER);
+        teacher1.setEmail("jli@highschoolbelgium.be");
         teacher1.setPhone("0499999990");
         teacher1.setLogin("jli@highschoolbelgium.be");
         teacher1.setPassword("pass");
@@ -91,27 +90,25 @@ public class DataInit implements InitializingBean {
         teacher2.setLogin("patjam");
         teacher2.setPassword("pass");
 
-
         User student1 = new User();
         student1.setLastname("Le Boss");
         student1.setFirstname("James");
-        student1.setEmail("jlb@highschoolbelgium.be");
         student1.setRole(Role.ADMIN);
+        student1.setEmail("jlb@highschoolbelgium.be");
         student1.setPhone("0499999999");
         student1.setLogin("jlb@highschoolbelgium.be");
         student1.setPassword("pass");
 
         User student2 = new User();
-        teacher2.setLastname("deloin");
-        teacher2.setFirstname("alain");
-        teacher2.setRole(Role.STUDENT);
-        teacher2.setEmail("aldeloin@gmail.com");
-        teacher2.setPhone("0498951231");
-        teacher2.setLogin("delala");
-        teacher2.setPassword("pass");
+        student2.setLastname("deloin");
+        student2.setFirstname("alain");
+        student2.setRole(Role.STUDENT);
+        student2.setEmail("aldeloin@gmail.com");
+        student2.setPhone("0498951231");
+        student2.setLogin("delala");
+        student2.setPassword("pass");
 
         admin1 = userRepository.save(admin1);
-
 
         teacher1 = userRepository.save(teacher1);
         teacher2 = userRepository.save(teacher2);
@@ -134,6 +131,5 @@ public class DataInit implements InitializingBean {
         equipment3 = equipmentRepository.save(equipment3);
 
         log.info("-- DATA INIT FINISHED --");
-
     }
 }
