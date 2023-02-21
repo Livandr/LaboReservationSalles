@@ -42,7 +42,7 @@ public class EquipmentController {
         return "redirect:/equipment/all";
     }
 
-    @PostMapping("/{id;[0-9]+}/delete")
+    @PostMapping("/{id:[0-9]+}/delete")
     public String processRemoveForm(@PathVariable Long id){
         equipmentService.delete(id);
         return "redirect:/equipment/all";
